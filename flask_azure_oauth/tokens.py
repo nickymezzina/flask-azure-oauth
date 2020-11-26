@@ -105,6 +105,7 @@ class AzureJWTClaims(JWTClaims):
                 "values": [
                     service_app_id,  # used by version 2.0 tokens
                     f"api://{ service_app_id }",  # used by version 1.0 tokens
+                    "https://storage.azure.com" # allows access to Azure Storage resource in validation
                 ],
             },
             "exp": {"essential": True},
